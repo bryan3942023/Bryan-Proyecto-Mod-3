@@ -4,7 +4,7 @@ import { ProductsPage } from "../src/pages/products.page";
 import { LoginPage } from "../src/pages/login.page";
 import { userData } from "../user-data";
 
-describe.skip('Feature Perform an Order', () => {
+describe('Feature Perform an Order', () => {
     let loginPage: LoginPage = new LoginPage();
     let productsPage: ProductsPage =  new ProductsPage();
     //let cartPage: CartPage =  new CartPage();

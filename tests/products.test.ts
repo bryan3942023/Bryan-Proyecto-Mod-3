@@ -4,7 +4,7 @@ import { LoginPage } from "../src/pages/login.page";
 import { ProductsPage } from "../src/pages/products.page";
 
 
-describe.skip('Inventory Feature', () => {
+describe('Inventory Feature', () => {
     let loginPage: LoginPage;
     let productsPage: ProductsPage;
 
