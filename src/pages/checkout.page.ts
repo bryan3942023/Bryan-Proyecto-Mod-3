@@ -66,7 +66,8 @@ export class CheckoutPage extends BasePage {
         this.driver.Page.waitForEvent('download'), 
         this.driver.Page.click(this.linkPdf)
     ]);
-    //download.saveAs('download.pdf');
+    
+    download.saveAs('./receipts/download.pdf');
     
     /*const [ download ] = await Promise.all([
         this.driver.Page.waitForEvent('download'), // wait for download to start
