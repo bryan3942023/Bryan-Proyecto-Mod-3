@@ -5,7 +5,7 @@ import { LoginPage } from "../src/pages/login.page";
 import { userData } from "../user-data";
 import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 
-describe('Feature Perform an Order, validate total', () => {
+describe('Feature add products to cart and removed all', () => {
     let loginPage: LoginPage = new LoginPage();
     let productsPage: ProductsPage =  new ProductsPage();
     //let cartPage: CartPage =  new CartPage();
@@ -15,38 +15,25 @@ describe('Feature Perform an Order, validate total', () => {
         await driverInstance.start(userData.browser);
         await loginPage.navigateTo(userData.url);
         await loginPage.Login();        
-    }, 30000);
+    }, 25000);
 
     afterAll(async () => {
         await driverInstance.closeDriver();
 
     });
     
-    test('Select products, Order checkout, validate total and donwload order receipt pdf ', async () => {
+    test('Select 3 products, and removed from cart', async () => {
         await productsPage.addToCartItem('One Plus 6T');
        // await productsPage.closeCartbtn();
        await shoppingcart.clickToCloseCart();
         await productsPage.addToCartItem('One Plus 7T');
         await shoppingcart.clickToCloseCart();
-        await productsPage.addToCartItem('iPhone 12 Mini')
+        await productsPage.addToCartItem('iPhone 12 Mini');
+        await shoppingcart.removeAllProducts();
+
+        const badge = await shoppingcart.getshoppingCartBadge();
+        expect(badge).toBe("0");
 
 
-        await shoppingcart.clickShoppingCartBadge();
-        await shoppingcart.clickCheckoutButton();
-
-        await checkoutPage.checkoutInformation('Bryan', 'Felipez','Street Test','State Test', '00000');
-        const actualCompleteMessage = await checkoutPage.getCompleteOrderMessage();
-        expect(actualCompleteMessage).toBe('Your Order has been successfully placed.');
-        
-        await checkoutPage.donwloadPdfLink();
-        
-        const  totalA = await checkoutPage.checkoutTotal();
-        const  totalSumProducts = await checkoutPage.calculateTotal();
-       // console.log(totalSumProducts);
-      //  console.log(totalA);
-
-        expect(Number(totalA)).toBe(Number(totalSumProducts));
-        await checkoutPage.clickFinishOrderButton();
-
-    },30000);
+    },25000);
 });

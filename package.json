@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:e2e1":"jest e2e1.test.ts",
+    "test:e2e2":"jest e2e2.test.ts",
+    "test:e2e3":"jest e2e3.test.ts",
+    "test:e2e4":"jest e2e4.test.ts"
+    
   },
   "keywords": [],
   "author": "",

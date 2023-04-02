@@ -2,9 +2,9 @@ import { BasePage } from "./base.page";
 
 export class FavouritesPage extends BasePage {
 
-    private cartOpenLink : string = 'span.bag.bag--float-cart-closed';
+    /*private cartOpenLink : string = 'span.bag.bag--float-cart-closed';
     private checkoutButton: string = '.buy-btn';
-    private closeCart:string='div.float-cart__close-btn';
+    private closeCart:string='div.float-cart__close-btn';*/
 
     
     private itemAddCartButton = (itemName: string) =>`//p[@class="shelf-item__title"][text()="${itemName}"]//ancestor::div[@class="shelf-item"]//div[@class="shelf-item__buy-btn"]`;
@@ -21,14 +21,14 @@ export class FavouritesPage extends BasePage {
     async itemremoveFavourites(itemName: string) {
         await this.driver.Page.click(this.removeFavourites(itemName));
     }
-    async openCart() {
+    /*async openCart() {
         await this.driver.Page.click(this.cartOpenLink);
     }
     async clickCheckoutButton() {
         return  await this.driver.Page.click(this.checkoutButton);
     }
-    async closeCartbtn(){
+   async closeCartbtn(){
         return await this.driver.Page.click(this.closeCart);
-    }
+    }*/
 
 }

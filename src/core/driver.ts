@@ -61,6 +61,7 @@ export class Driver {
         }
         return browsers[browserName];
     }
+    
 }
 
 //export const driverInstance =  new Driver();

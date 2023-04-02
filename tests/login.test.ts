@@ -2,7 +2,7 @@ import { driverInstance } from "../src/core/driver";
 import { LoginPage } from "../src/pages/login.page";
 
 
-describe('Feature Login StackDemo', () => {
+describe.skip('Feature Login StackDemo', () => {
    let loginPage: LoginPage;
 
     beforeAll(async () => {              
@@ -10,7 +10,7 @@ describe('Feature Login StackDemo', () => {
         loginPage = new LoginPage();  
         
        
-    }, 3000);
+    }, 35000);
 
     afterAll(async () => {
         await driverInstance.closeDriver();

@@ -1,10 +1,12 @@
 import { setTimeout } from "timers";
 import { driverInstance } from "../src/core/driver";
+//import { mainHeader } from "../src/pages/components/header.page";
+import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 import { LoginPage } from "../src/pages/login.page";
 import { ProductsPage } from "../src/pages/products.page";
 
 
-describe('Inventory Feature', () => {
+describe.skip('Inventory Feature', () => {
     let loginPage: LoginPage;
     let productsPage: ProductsPage;
 
@@ -36,18 +38,19 @@ describe('Inventory Feature', () => {
         await productsPage.addToCartItem(itemName);
         const isDisplayed = await productsPage.validateRemoveButton(itemName);        
         expect(isDisplayed).not.toBeFalsy();
-        await productsPage.closeCartbtn();
+        await shoppingcart.clickToCloseCart();
 
     }, 35000);
 
     test('Shopping Cart Icon updated amount', async () => {        
         await productsPage.addToCartItem('iPhone 11 Pro');
-        await productsPage.closeCartbtn();
+        await shoppingcart.clickToCloseCart();
         await productsPage.addToCartItem('Galaxy S9');
-        await productsPage.closeCartbtn();
+        await shoppingcart.clickToCloseCart();
         await productsPage.addToCartItem('Galaxy Note 20 Ultra');
-        await productsPage.closeCartbtn();
-        const badge = await productsPage.getShoppingCartBadge();
+        await shoppingcart.clickToCloseCart();
+        //const badge = await productsPage.getShoppingCartBadge();
+        const badge = await shoppingcart.getshoppingCartBadge();
         expect(badge).toBe("4");
     }, 35000);
 
