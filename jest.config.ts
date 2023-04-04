@@ -102,12 +102,15 @@ export default {
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
   preset: 'ts-jest',
+  //preset: 'jest-playwright-preset',
+
 
   // Run tests from one or more projects
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  // reporters: undefined,
+  // reporters: ["default", "jest-allure"],
+
 
   // Automatically reset mock state before every test
   // resetMocks: false,
@@ -137,7 +140,8 @@ export default {
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
-  setupFilesAfterEnv: ['./setup.js'],
+  setupFilesAfterEnv: ['./setup.js', "jest-allure/dist/setup"],
+
    
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
@@ -175,6 +179,7 @@ export default {
 
   // This option allows use of a custom test runner
   // testRunner: "jest-circus/runner",
+  testRunner: "jest-jasmine2",
 
   // A map from regular expressions to paths to transformers
   // transform: undefined,
