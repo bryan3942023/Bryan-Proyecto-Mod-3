@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680650208072' stop='1680650228475'>
+    <name>Feature Perform an Order, validate total</name>
+    <title>Feature Perform an Order, validate total</title>
+    <test-cases>
+        <test-case start='1680650215729' status='passed' stop='1680650228238'>
+            <name>Select products, Order checkout, donwload order receipt pdf and validate total amount</name>
+            <title>Select products, Order checkout, donwload order receipt pdf and validate total amount</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

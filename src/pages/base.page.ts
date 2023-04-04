@@ -16,7 +16,5 @@ export abstract class BasePage{
     async clickElement(locator:string){
         return ElementActions.click(locator);
     }
-    /*async getUrl() {
-        return this.driver.Page.title;
-    }*/
+  
 }

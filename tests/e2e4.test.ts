@@ -6,9 +6,9 @@ import { userData } from "../user-data";
 import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 
 describe('Feature add products to cart and removed all', () => {
-    let loginPage: LoginPage = new LoginPage();
-    let productsPage: ProductsPage =  new ProductsPage();
-    let checkoutPage: CheckoutPage = new CheckoutPage();
+    const loginPage: LoginPage = new LoginPage();
+    const productsPage: ProductsPage =  new ProductsPage();
+   // const checkoutPage: CheckoutPage = new CheckoutPage();
 
     beforeAll( async () => {
         await driverInstance.start(userData.browser);

@@ -17,14 +17,6 @@ export class FavouritesPage extends BasePage {
     async itemremoveFavourites(itemName: string) {
         await ElementActions.click(this.removeFavourites(itemName));
     }
-    /*async openCart() {
-        await this.driver.Page.click(this.cartOpenLink);
-    }
-    async clickCheckoutButton() {
-        return  await this.driver.Page.click(this.checkoutButton);
-    }
-   async closeCartbtn(){
-        return await this.driver.Page.click(this.closeCart);
-    }*/
+  
 
 }

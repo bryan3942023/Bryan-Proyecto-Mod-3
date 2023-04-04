@@ -34,9 +34,7 @@ export class Driver {
         return this.driver;
     }
 
-    // async getPageTitle() {
-    //     return await this.page.title;
-    // }
+
 
     async isElementDisplayed(locator: string) {
         //await this.page.waitForTimeout(5000);
@@ -64,5 +62,5 @@ export class Driver {
     
 }
 
-//export const driverInstance =  new Driver();
+
 export const driverInstance =  Driver.getInstance();

@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680650455542' stop='1680650455544'>
+    <name>Inventory Feature</name>
+    <title>Inventory Feature</title>
+    <test-cases>
+        <test-case start='1680650455542' status='pending' stop='1680650455543'>
+            <name>Validate login in Products Page</name>
+            <title>Validate login in Products Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1680650455544' status='pending' stop='1680650455544'>
+            <name>Select Product Items from Inventory</name>
+            <title>Select Product Items from Inventory</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1680650455544' status='pending' stop='1680650455544'>
+            <name>Shopping Cart Icon updated amount</name>
+            <title>Shopping Cart Icon updated amount</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

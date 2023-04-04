@@ -6,9 +6,9 @@ import { userData } from "../user-data";
 import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 
 describe('Feature Perform an Order, validate total', () => {
-    let loginPage: LoginPage = new LoginPage();
-    let productsPage: ProductsPage =  new ProductsPage();
-    let checkoutPage: CheckoutPage = new CheckoutPage();
+    const loginPage: LoginPage = new LoginPage();
+    const productsPage: ProductsPage =  new ProductsPage();
+    const checkoutPage: CheckoutPage = new CheckoutPage();
 
     beforeAll( async () => {
         await driverInstance.start(userData.browser);
@@ -23,7 +23,7 @@ describe('Feature Perform an Order, validate total', () => {
     
     test('Select products, Order checkout, donwload order receipt pdf and validate total amount', async () => {
         await productsPage.addToCartItem('One Plus 6T');
-;
+
        await shoppingcart.clickToCloseCart();
         await productsPage.addToCartItem('One Plus 7T');
         await shoppingcart.clickToCloseCart();
@@ -35,7 +35,7 @@ describe('Feature Perform an Order, validate total', () => {
 
         await checkoutPage.checkoutInformation('Bryan', 'Felipez','Street Test','State Test', '00000');
         const actualCompleteMessage = await checkoutPage.getCompleteOrderMessage();
-        expect(actualCompleteMessage).toBe('Your Order has been unsuccessfully placed.');
+        expect(actualCompleteMessage).toBe('Your Order has been successfully placed.');
         
         await checkoutPage.donwloadPdfLink();
         

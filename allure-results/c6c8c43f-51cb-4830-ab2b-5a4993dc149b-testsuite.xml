@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680650207077' stop='1680650224847'>
+    <name>Select all products of the page and validate </name>
+    <title>Select all products of the page and validate </title>
+    <test-cases>
+        <test-case start='1680650216028' status='passed' stop='1680650224603'>
+            <name>Select products all products(25) and validate the number of products on the cart</name>
+            <title>Select products all products(25) and validate the number of products on the cart</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

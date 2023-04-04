@@ -10,10 +10,10 @@ import { mainHeader } from "../src/pages/components/header.page";
 
 
 describe('Add Favourites and place an order', () => {
-    let loginPage: LoginPage = new LoginPage();
-    let productsPage: ProductsPage =  new ProductsPage();
-    let favourites: FavouritesPage =new FavouritesPage();
-    let checkoutPage: CheckoutPage = new CheckoutPage();
+    const loginPage: LoginPage = new LoginPage();
+    const productsPage: ProductsPage =  new ProductsPage();
+    const favourites: FavouritesPage =new FavouritesPage();
+    const checkoutPage: CheckoutPage = new CheckoutPage();
     
    
     beforeAll( async () => {

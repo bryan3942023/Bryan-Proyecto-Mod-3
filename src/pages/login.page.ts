@@ -11,7 +11,7 @@ export class LoginPage extends BasePage{
     private password: string ='#react-select-3-option-0-0';
     private loginbutton: string ='#login-btn';
 
-    //private userType='//*[@id="username"]//div[text()="demouser"]';
+
     private userType= (user: string) =>`//*[@id="username"]//div[text()="${user}"]`;
 
     constructor(){

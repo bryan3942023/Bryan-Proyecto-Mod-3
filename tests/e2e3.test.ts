@@ -8,9 +8,9 @@ import { productsList } from "../products-list";
 import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 
 describe('Select all products of the page and validate ', () => {
-    let loginPage: LoginPage = new LoginPage();
-    let productsPage: ProductsPage =  new ProductsPage();
-    let checkoutPage: CheckoutPage = new CheckoutPage();
+    const loginPage: LoginPage = new LoginPage();
+    const productsPage: ProductsPage =  new ProductsPage();
+   // let checkoutPage: CheckoutPage = new CheckoutPage();
 
     beforeAll( async () => {
         await driverInstance.start(userData.browser);
@@ -25,7 +25,7 @@ describe('Select all products of the page and validate ', () => {
     
     test('Select products all products(25) and validate the number of products on the cart', async () => {
 
-        for(let prod of productsList) {
+        for(const prod of productsList) {
             //console.log(prod);    
             await productsPage.addToCartItem(prod);
             await shoppingcart.clickToCloseCart();

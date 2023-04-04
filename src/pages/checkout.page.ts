@@ -15,20 +15,12 @@ export class CheckoutPage extends BasePage {
     private linkPdf: string = '#downloadpdf';
     private continueBtn: string = '.continueButtonContainer a button';
     
-    //private priceProduct: string= '/div[@class="product"]/div[@class="product-column product-actions"]/div[@class="product-price optimizedCheckout-contentPrimary"]';
     private priceProduct: string= '//div[@class="product-price optimizedCheckout-contentPrimary"]';
 
 
     private priceUnitProd = (value: number) =>`(//div[@class='product-price optimizedCheckout-contentPrimary'])[${value}]`;
     
 
-
-    //private arrayOfpriceProduct =  this.driver.Page.$(this.priceProduct);
-    //this.driver.Page.locator('.product-price.optimizedCheckout-contentPrimary')
-    //this.driver.Page.locator(this.priceProduct).all();
-
-    //Checkout message successfully placed order 
-    //private completeMessage: string = '//legend[@id="confirmation-message"][text()="Your Order has been successfully placed."]';
     private completeMessage: string ='legend#confirmation-message';
 
     private totalAmount: string ='span.cart-priceItem-value span';

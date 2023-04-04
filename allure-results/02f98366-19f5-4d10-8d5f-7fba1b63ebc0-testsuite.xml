@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680650455601' stop='1680650497763'>
+    <name>Add Favourites and place an order</name>
+    <title>Add Favourites and place an order</title>
+    <test-cases>
+        <test-case start='1680650463195' status='passed' stop='1680650467280'>
+            <name>add 2 products to favourites</name>
+            <title>add 2 products to favourites</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680650467280' status='passed' stop='1680650467364'>
+            <name>Go to Favourites page</name>
+            <title>Go to Favourites page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680650467364' status='failed' stop='1680650497561'>
+            <name>add products from Favourites page to the cart, remove 1 and Order checkout</name>
+            <title>add products from Favourites page to the cart, remove 1 and Order checkout</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for locator('div.float-cart__close-btn')
+                ============================================================</message>
+                <stack-trace>page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for locator('div.float-cart__close-btn')
+                ============================================================
+                    at Function.&lt;anonymous> (C:\Users\Administrador\Documents\GitHub\Bryan-Proyecto-Mod-3\src\core\element-actions.ts:7:35)
+                    at fulfilled (C:\Users\Administrador\Documents\GitHub\Bryan-Proyecto-Mod-3\src\core\element-actions.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
