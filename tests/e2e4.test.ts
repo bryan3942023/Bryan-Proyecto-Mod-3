@@ -34,5 +34,6 @@ describe('Feature add products to cart and removed all', () => {
         expect(badge).toBe("0");
 
 
+
     });
 });

@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680640569474' stop='1680640578964'>
+    <name>Add Favourites and place an order</name>
+    <title>Add Favourites and place an order</title>
+    <test-cases>
+        <test-case start='1680640573981' status='passed' stop='1680640576407'>
+            <name>add 2 products to favourites</name>
+            <title>add 2 products to favourites</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680640576407' status='passed' stop='1680640576508'>
+            <name>Go to Favourites page</name>
+            <title>Go to Favourites page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680640576508' status='failed' stop='1680640578766'>
+            <name>add products from Favourites page to the cart, remove 1 and Order checkout</name>
+            <title>add products from Favourites page to the cart, remove 1 and Order checkout</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: 1000
+                Received: 599</message>
+                <stack-trace>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: 1000
+                Received: 599
+                    at C:\Users\Administrador\Documents\GitHub\Bryan-Proyecto-Mod-3\tests\e2e2.test.ts:61:32
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (C:\Users\Administrador\Documents\GitHub\Bryan-Proyecto-Mod-3\tests\e2e2.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

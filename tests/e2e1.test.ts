@@ -35,7 +35,7 @@ describe('Feature Perform an Order, validate total', () => {
 
         await checkoutPage.checkoutInformation('Bryan', 'Felipez','Street Test','State Test', '00000');
         const actualCompleteMessage = await checkoutPage.getCompleteOrderMessage();
-        expect(actualCompleteMessage).toBe('Your Order has been successfully placed.');
+        expect(actualCompleteMessage).toBe('Your Order has been unsuccessfully placed.');
         
         await checkoutPage.donwloadPdfLink();
         

@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680640859347' stop='1680640870692'>
+    <name>Feature Perform an Order, validate total</name>
+    <title>Feature Perform an Order, validate total</title>
+    <test-cases>
+        <test-case start='1680640865769' status='failed' stop='1680640870484'>
+            <name>Select products, Order checkout, donwload order receipt pdf and validate total amount</name>
+            <title>Select products, Order checkout, donwload order receipt pdf and validate total amount</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Your Order has been unsuccessfully placed."
+                Received: "Your Order has been successfully placed."</message>
+                <stack-trace>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "Your Order has been unsuccessfully placed."
+                Received: "Your Order has been successfully placed."
+                    at C:\Users\Administrador\Documents\GitHub\Bryan-Proyecto-Mod-3\tests\e2e1.test.ts:38:39
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (C:\Users\Administrador\Documents\GitHub\Bryan-Proyecto-Mod-3\tests\e2e1.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
