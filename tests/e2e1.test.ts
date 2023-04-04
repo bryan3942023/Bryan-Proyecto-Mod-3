@@ -21,7 +21,7 @@ describe('Feature Perform an Order, validate total', () => {
 
     });
     
-    test('Select products, Order checkout, validate total and donwload order receipt pdf ', async () => {
+    test('Select products, Order checkout, donwload order receipt pdf and validate total amount', async () => {
         await productsPage.addToCartItem('One Plus 6T');
 ;
        await shoppingcart.clickToCloseCart();

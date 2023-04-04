@@ -25,7 +25,7 @@ export class LoginPage extends BasePage{
         await ElementActions.click(this.passworddropd);
         await ElementActions.click(this.password);
         await ElementActions.click(this.loginbutton);
-        await ElementActions.waitForTimeout(5000);
+        //await ElementActions.waitForTimeout(5000);
     }
 
     async setUsername(){
