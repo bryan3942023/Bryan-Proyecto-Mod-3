@@ -16,7 +16,7 @@ describe('Select all products of the page and validate ', () => {
         await driverInstance.start(userData.browser);
         await loginPage.navigateTo(userData.url);
         await loginPage.Login();        
-    }, 20000);
+    });
 
     afterAll(async () => {
         await driverInstance.closeDriver();
@@ -36,5 +36,5 @@ describe('Select all products of the page and validate ', () => {
         const badge = await shoppingcart.getshoppingCartBadge();
         expect(badge).toBe("25");
 
-    },35000);
+    });
 });

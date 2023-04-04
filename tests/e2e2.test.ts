@@ -20,7 +20,7 @@ describe('Add Favourites and place an order', () => {
         await driverInstance.start(userData.browser);
         await loginPage.navigateTo(userData.url);
         await loginPage.Login();        
-    }, 20000);
+    });
 
     afterAll(async () => {
         await driverInstance.closeDriver();

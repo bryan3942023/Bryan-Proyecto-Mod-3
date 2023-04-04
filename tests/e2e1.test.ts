@@ -14,7 +14,7 @@ describe('Feature Perform an Order, validate total', () => {
         await driverInstance.start(userData.browser);
         await loginPage.navigateTo(userData.url);
         await loginPage.Login();        
-    }, 30000);
+    });
 
     afterAll(async () => {
         await driverInstance.closeDriver();
@@ -47,5 +47,5 @@ describe('Feature Perform an Order, validate total', () => {
         expect(Number(totalA)).toBe(Number(totalSumProducts));
         await checkoutPage.clickFinishOrderButton();
 
-    },30000);
+    });
 });

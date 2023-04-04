@@ -14,7 +14,7 @@ describe('Feature add products to cart and removed all', () => {
         await driverInstance.start(userData.browser);
         await loginPage.navigateTo(userData.url);
         await loginPage.Login();        
-    }, 25000);
+    });
 
     afterAll(async () => {
         await driverInstance.closeDriver();
@@ -34,5 +34,5 @@ describe('Feature add products to cart and removed all', () => {
         expect(badge).toBe("0");
 
 
-    },25000);
+    });
 });
