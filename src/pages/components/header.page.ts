@@ -1,3 +1,4 @@
+import { ElementActions } from "../../core/element-actions";
 import { BasePage } from "../base.page";
 
 
@@ -17,32 +18,25 @@ export class headerPage extends BasePage{
     async clickLink(link:string) {
         switch (link) {
             case 'home':
-            return this.driver.Page.click(this.homeLink);
+            return ElementActions.click(this.homeLink);
             break;
             case 'offers':
-            return this.driver.Page.click(this.OffersLink);
+            return ElementActions.click(this.OffersLink);
             break;
             case 'orders':
-            return this.driver.Page.click(this.OrdersLink);
+            return ElementActions.click(this.OrdersLink);
             break;
             case 'favourites':
-            return this.driver.Page.click(this.FavouritesLink);
+            return ElementActions.click(this.FavouritesLink);
             break;
             default:
-            return this.driver.Page.click(this.homeLink);
+            return ElementActions.click(this.homeLink);
             break;
 
     }
     }
 
-/*
-    async getshoppingCartBadge() {   
-        return this.driver.Page.textContent(this.shoppingCartBadge);
-    }
-    async clickToCloseCart() {
-            return this.driver.Page.click(this.closeCart);
-    }
-*/
+
 
 
 

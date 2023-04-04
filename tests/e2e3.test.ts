@@ -23,7 +23,7 @@ describe('Select all products of the page and validate ', () => {
 
     });
     
-    test('Select products all products(25) and validate', async () => {
+    test('Select products all products(25) and validate the number of products on the cart', async () => {
 
         for(let prod of productsList) {
             //console.log(prod);    
@@ -33,17 +33,8 @@ describe('Select all products of the page and validate ', () => {
 
         await shoppingcart.clickShoppingCartBadge();
         await shoppingcart.clickCheckoutButton();
-        //const badge = await productsPage.getShoppingCartBadge();
         const badge = await shoppingcart.getshoppingCartBadge();
         expect(badge).toBe("25");
-
-
-      /*  await checkoutPage.checkoutInformation('Bryan', 'Felipez','Street Test','State Test', '00000');
-        const actualCompleteMessage = await checkoutPage.getCompleteOrderMessage();
-        expect(actualCompleteMessage).toBe('Your Order has been successfully placed.');
-        const  totalA = await checkoutPage.checkoutTotal();
-        console.log(totalA);
-        await checkoutPage.clickFinishOrderButton();*/
 
     },35000);
 });

@@ -1,4 +1,5 @@
- import { BasePage } from "../base.page";
+ import { ElementActions } from "../../core/element-actions";
+import { BasePage } from "../base.page";
 
 
 export class shoppingcartPage extends BasePage{
@@ -15,37 +16,31 @@ export class shoppingcartPage extends BasePage{
         super();
     }
 
-    //async getElementText() {
     async getshoppingCartBadge() {
-        //await this.driver.Page.click(this.itemAddCartButton(itemName));
         
-        return this.driver.Page.textContent(this.shoppingCartBadge);
+        return ElementActions.textContent(this.shoppingCartBadge);
     }
     async clickToCloseCart() {
-            return this.driver.Page.click(this.closeCart);
+            return ElementActions.click(this.closeCart);
     }
     async clickCheckoutButton() {
-        return  await this.driver.Page.click(this.checkoutButton);
+        return  await ElementActions.click(this.checkoutButton);
     }
-  /*  async getShoppingCartBadge() {
-        return await this.driver.Page.innerText(this.shoppingCartBadge);
-    }*/
+
 
     async clickShoppingCartBadge() {
-        return await this.driver.Page.click(this.shoppingCartBadge);
+        return await ElementActions.click(this.shoppingCartBadge);
     }
-  /* async closeCartbtn(){
-        return await this.driver.Page.click(this.closeCart);
-    }*/
+
 
     async clickRemoveProduct(product: string){
-        await this.driver.Page.click(this.removeProduct(product));
+        await ElementActions.click(this.removeProduct(product));
     }
 
     async removeAllProducts(){
         const cantProd=Number(await this.getshoppingCartBadge());
         for (let index = 1; index <= cantProd; index++) {
-        await this.driver.Page.click(this.locatorRemoveProduct(String(index)));
+        await ElementActions.click(this.locatorRemoveProduct(String(index)));
         }
         
     }

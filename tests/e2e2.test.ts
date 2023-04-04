@@ -12,7 +12,6 @@ import { mainHeader } from "../src/pages/components/header.page";
 describe('Add Favourites and place an order', () => {
     let loginPage: LoginPage = new LoginPage();
     let productsPage: ProductsPage =  new ProductsPage();
-    //let cartPage: CartPage =  new CartPage();
     let favourites: FavouritesPage =new FavouritesPage();
     let checkoutPage: CheckoutPage = new CheckoutPage();
     

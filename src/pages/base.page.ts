@@ -1,21 +1,20 @@
 import { Driver, driverInstance } from "../core/driver";
+import { ElementActions } from "../core/element-actions";
 
 export abstract class BasePage{
     protected driver:Driver;
 
     constructor(){
        this.driver = driverInstance;
-        //this.driver.startDriver();
     }
     async navigateTo(url: string){
-        await this.driver.Page.goto(url,{waitUntil:'networkidle'});
+        await ElementActions.goto(url);
     }
     async getElementText(locator: string) {
-        //await this.driver.Page.click(this.itemAddCartButton(itemName));
-        return this.driver.Page.textContent(locator);
+        return ElementActions.textContent(locator);
     }
     async clickElement(locator:string){
-        return this.driver.Page.click(locator);
+        return ElementActions.click(locator);
     }
     /*async getUrl() {
         return this.driver.Page.title;

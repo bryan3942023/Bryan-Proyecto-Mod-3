@@ -8,7 +8,6 @@ import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 describe('Feature add products to cart and removed all', () => {
     let loginPage: LoginPage = new LoginPage();
     let productsPage: ProductsPage =  new ProductsPage();
-    //let cartPage: CartPage =  new CartPage();
     let checkoutPage: CheckoutPage = new CheckoutPage();
 
     beforeAll( async () => {
@@ -22,7 +21,7 @@ describe('Feature add products to cart and removed all', () => {
 
     });
     
-    test('Select 3 products, and removed from cart', async () => {
+    test('Select 3 products, and removed all from cart', async () => {
         await productsPage.addToCartItem('One Plus 6T');
        // await productsPage.closeCartbtn();
        await shoppingcart.clickToCloseCart();

@@ -1,14 +1,10 @@
 import { strict } from "assert";
+import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base.page";
 
 export class LoginPage extends BasePage{
 
     //Locators
-    // private username: string ='#user-name';
-    // private password: string ='#password';
-    // private loginbutton: string ='#login-button';
-
-
     private usernamedropd: string ='#username';
     private username: string ='#react-select-2-option-0-0';
     private passworddropd: string ='#password';
@@ -24,39 +20,39 @@ export class LoginPage extends BasePage{
 
 
     async Login() {
-        await this.driver.Page.click(this.usernamedropd);
-        await this.driver.Page.click(this.username);
-        await this.driver.Page.click(this.passworddropd);
-        await this.driver.Page.click(this.password);
-        await this.driver.Page.click(this.loginbutton);
-        await this.driver.Page.waitForTimeout(5000);
+        await ElementActions.click(this.usernamedropd);
+        await ElementActions.click(this.username);
+        await ElementActions.click(this.passworddropd);
+        await ElementActions.click(this.password);
+        await ElementActions.click(this.loginbutton);
+        await ElementActions.waitForTimeout(5000);
     }
 
     async setUsername(){
 
-       await this.driver.Page.click(this.usernamedropd);
-       await this.driver.Page.click(this.username);
+       await ElementActions.click(this.usernamedropd);
+       await ElementActions.click(this.username);
         
     }
     async setPassword(){
 
-        await this.driver.Page.click(this.passworddropd);
-        await this.driver.Page.click(this.password);
+        await ElementActions.click(this.passworddropd);
+        await ElementActions.click(this.password);
         
     }
     async clickButton(){
 
-        await this.driver.Page.click(this.loginbutton);
+        await ElementActions.click(this.loginbutton);
         
     }
     async clickButtonlogin(text:string){
  
-        await this.driver.Page.click(text);
+        await ElementActions.click(text);
         
     }
     async close() {
         
-        await this.driver.Page.close();
+        await ElementActions.close();
      
     }
 

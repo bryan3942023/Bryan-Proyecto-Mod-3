@@ -8,7 +8,6 @@ import { shoppingcart } from "../src/pages/components/shoppingcart.page";
 describe('Feature Perform an Order, validate total', () => {
     let loginPage: LoginPage = new LoginPage();
     let productsPage: ProductsPage =  new ProductsPage();
-    //let cartPage: CartPage =  new CartPage();
     let checkoutPage: CheckoutPage = new CheckoutPage();
 
     beforeAll( async () => {
@@ -24,7 +23,7 @@ describe('Feature Perform an Order, validate total', () => {
     
     test('Select products, Order checkout, validate total and donwload order receipt pdf ', async () => {
         await productsPage.addToCartItem('One Plus 6T');
-       // await productsPage.closeCartbtn();
+;
        await shoppingcart.clickToCloseCart();
         await productsPage.addToCartItem('One Plus 7T');
         await shoppingcart.clickToCloseCart();

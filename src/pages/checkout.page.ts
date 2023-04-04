@@ -1,3 +1,4 @@
+import { ElementActions } from "../core/element-actions";
 import { BasePage } from "./base.page";
 import { shoppingcart } from "./components/shoppingcart.page";
 
@@ -38,47 +39,34 @@ export class CheckoutPage extends BasePage {
     }
 
     async checkoutInformation(firstName: string, lastName: string, addressStreet: string, stateProvince: string, postalCode: string) {
-        await this.driver.Page.fill(this.firstName, firstName);
-        await this.driver.Page.fill(this.lastName, lastName);
-        await this.driver.Page.fill(this.addressStreet, addressStreet);
-        await this.driver.Page.fill(this.stateProvince, stateProvince);
-        await this.driver.Page.fill(this.postalCode, postalCode);
-        await this.driver.Page.click(this.continueButton);
+        await ElementActions.fill(this.firstName, firstName);
+        await ElementActions.fill(this.lastName, lastName);
+        await ElementActions.fill(this.addressStreet, addressStreet);
+        await ElementActions.fill(this.stateProvince, stateProvince);
+        await ElementActions.fill(this.postalCode, postalCode);
+        await ElementActions.click(this.continueButton);
     }
 
     async clickFinishOrderButton() {
-        await this.driver.Page.click(this.continueBtn);
+        await ElementActions.click(this.continueBtn);
     }
 
    
     async getCompleteOrderMessage() {
-        return await this.driver.Page.innerText(this.completeMessage);
+        return await ElementActions.innerText(this.completeMessage);
     }
     async checkoutTotal() {
-        return await (await this.driver.Page.innerText(this.totalAmount)).replace('$','');
+        return await (await ElementActions.innerText(this.totalAmount)).replace('$','');
     }
     async donwloadPdfLink(){
-        
-       /*let download = */ /*await this.driver.Page.click(this.linkPdf);
-       const donwloadFile =await this.driver.Page.waitForEvent('download');
-       await donwloadFile.saveAs('download.pdf');*/
        const [ download ] = await Promise.all([
-        this.driver.Page.waitForEvent('download'), 
-        this.driver.Page.click(this.linkPdf)
+        ElementActions.downloadFile(), 
+       ElementActions.click(this.linkPdf)
     ]);
     
     download.saveAs('./receipts/download.pdf');
     
-    /*const [ download ] = await Promise.all([
-        this.driver.Page.waitForEvent('download'), // wait for download to start
-        this.driver.Page.click(this.linkPdf)
-    ]);
-    // wait for download to complete
-    const path = await download.path();
-    console.log(path);*/
-    
-       //download.save_as('C:\Users\Administrador\Downloads');
-       await this.driver.Page.waitForTimeout(5000);
+       await ElementActions.waitForTimeout(5000);
     }
 
     async calculateTotal() {
@@ -87,9 +75,8 @@ export class CheckoutPage extends BasePage {
         const cantProd=await this.driver.Page.locator(this.priceProduct).count();
         for (let index = 1; index <= cantProd; index++) {
         //  console.log(index);
-          //await this.driver.Page.innerText(this.priceUnitProd(index));
-          //console.log(await (await this.driver.Page.innerText(this.priceUnitProd(index))).replace('$',''));
-          unitPrice=await (await this.driver.Page.innerText(this.priceUnitProd(index))).replace('$','');
+
+          unitPrice=await (await ElementActions.getElementText(this.priceUnitProd(index))).replace('$','');
             totalSum +=Number(unitPrice);
         }
         //console.log(totalSum);  
