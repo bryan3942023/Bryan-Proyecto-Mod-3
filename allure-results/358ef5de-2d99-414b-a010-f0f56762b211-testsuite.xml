@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1680651466784' stop='1680651484159'>
+    <name>Add Favourites and place an order</name>
+    <title>Add Favourites and place an order</title>
+    <test-cases>
+        <test-case start='1680651475161' status='passed' stop='1680651479730'>
+            <name>add 2 products to favourites</name>
+            <title>add 2 products to favourites</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680651479731' status='passed' stop='1680651479831'>
+            <name>Go to Favourites page</name>
+            <title>Go to Favourites page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1680651479831' status='passed' stop='1680651483840'>
+            <name>add products from Favourites page to the cart, remove 1 and Order checkout</name>
+            <title>add products from Favourites page to the cart, remove 1 and Order checkout</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

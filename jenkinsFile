@@ -8,12 +8,7 @@ pipeline {
 		git branch: 'main', url: 'https://github.com/bryan3942023/Bryan-Proyecto-Mod-3.git'
 		            }
         }
-        stage('Review Repo') {
-            steps {
-                echo 'Revieweing...'
-				bat 'dir'
-            }
-        }
+
         stage('Build Project') {
             steps {
                 echo 'Building....'
